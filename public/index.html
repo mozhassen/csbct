@@ -3,367 +3,216 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Creativity and Innovation Training | AASTU</title>
-<meta name="description" content="A two-day training on the theories and processes of creativity and innovation. Read about the course and download the chapters and the participant list.">
+<title>Creativity and Innovation Behavioral Competency | AASTU</title>
+<meta name="description" content="Creativity and Innovation Behavioral Competency training for AASTU employees, November 11, 2026. Read about the training and download the slides.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#F5F7F9;
+  --paper:#F6F5FA;
   --surface:#FFFFFF;
-  --ink:#13233B;
-  --muted:#4F5D70;
-  --line:#D5DCE4;
-  --teal:#0E6F68;
-  --teal-soft:#DDF0EE;
-  --amber:#F0B33A;
-  --amber-soft:#FCF1D6;
+  --ink:#14213D;
+  --muted:#515B70;
+  --line:#D9D9E6;
+  --purple:#6B3FA0;
+  --purple-soft:#EEE7F7;
+  --gold:#C99A2E;
+  --gold-soft:#FAF1D9;
+  --navy:#0B2A66;
   --head:"Bricolage Grotesque","Trebuchet MS",Arial,sans-serif;
   --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --paper:#0F1826;
-    --surface:#16233A;
-    --ink:#EAF0F7;
-    --muted:#A9B6C7;
-    --line:#2A3A55;
-    --teal:#4FC3B8;
-    --teal-soft:#14383A;
-    --amber:#F0B33A;
-    --amber-soft:#3A3016;
+    --paper:#12111C;
+    --surface:#1B1A2A;
+    --ink:#EDEBF5;
+    --muted:#B0ADC4;
+    --line:#2F2D45;
+    --purple:#B796E6;
+    --purple-soft:#2A2140;
+    --gold:#E2B84F;
+    --gold-soft:#34290F;
+    --navy:#9DB6F2;
   }
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 1.125rem/1.65 var(--body)}
-a{color:var(--teal)}
-:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+a{color:var(--purple)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
 .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
 h1,h2,h3{font-family:var(--head);line-height:1.15;margin:0;color:var(--ink)}
-h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:700;letter-spacing:-0.02em}
+h1{font-size:clamp(2.2rem,5.6vw,3.9rem);font-weight:700;letter-spacing:-0.02em}
 h2{font-size:clamp(1.6rem,3.4vw,2.2rem);font-weight:700;margin-bottom:12px}
 h3{font-size:1.25rem;font-weight:500}
 p{margin:0 0 1em}
-.skip{position:absolute;left:-999px;top:8px;background:var(--amber);color:#13233B;padding:8px 14px;border-radius:6px;z-index:10}
-.skip:focus{left:8px}
+.sub{color:var(--muted);max-width:64ch}
 
-/* hero */
-.hero{padding:64px 0 56px;border-bottom:1px solid var(--line)}
-.hero .org{font-weight:600;color:var(--muted);margin-bottom:20px}
-.hero p.lead{max-width:60ch;font-size:1.3rem;color:var(--muted);margin-top:20px}
-.jump{display:inline-block;margin-top:8px;padding:12px 22px;background:var(--ink);color:var(--paper);font-weight:600;text-decoration:none;border-radius:8px}
-.jump:hover{background:var(--teal);color:#fff}
+.topbar{height:10px;background:var(--navy)}
+.hero{padding:56px 0 48px;border-bottom:1px solid var(--line)}
+.org{font-weight:600;color:var(--purple);margin-bottom:18px}
+.hero p.lead{max-width:62ch;font-size:1.3rem;color:var(--muted);margin-top:18px}
+.facts{margin:34px 0 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.fact{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:10px;padding:14px 16px}
+.fact .k{font-size:.95rem;color:var(--muted);font-weight:600}
+.fact .v{font-family:var(--head);font-weight:500;font-size:1.15rem;line-height:1.3}
+.btn,.jump{display:inline-block;padding:12px 22px;font-weight:600;text-decoration:none;border-radius:8px}
+.jump{background:var(--navy);color:var(--paper)}
+.jump.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.jump:hover{filter:brightness(1.15)}
 
-/* the journey */
-.journey{margin-top:44px;display:grid;gap:22px}
-.lane h3{margin-bottom:10px;font-size:1.05rem;font-weight:500;color:var(--muted)}
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;counter-reset:s}
-.steps li{counter-increment:s;position:relative;padding:14px 12px 14px 12px;border-radius:8px;font-family:var(--head);font-weight:500;font-size:1.02rem;line-height:1.25;min-height:76px;display:flex;align-items:flex-end}
-.steps li::before{content:counter(s);position:absolute;top:8px;left:12px;font:600 .85rem var(--body);opacity:.7}
-.lane.c .steps li{background:var(--teal-soft);color:var(--ink)}
-.lane.i .steps li{background:var(--amber-soft);color:var(--ink)}
-.lane.c .steps li{border-top:4px solid var(--teal)}
-.lane.i .steps li{border-top:4px solid var(--amber)}
-
-section{padding:56px 0;border-bottom:1px solid var(--line)}
+section{padding:52px 0;border-bottom:1px solid var(--line)}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.cols.wide{grid-template-columns:5fr 4fr}
 ul.plain{margin:0;padding-left:1.2em}
 ul.plain li{margin-bottom:.5em}
-.sub{color:var(--muted);max-width:62ch}
+ol.num{margin:0;padding:0;list-style:none;counter-reset:n}
+ol.num li{counter-increment:n;display:flex;gap:14px;align-items:baseline;padding:10px 0;border-bottom:1px dashed var(--line)}
+ol.num li::before{content:counter(n);flex:none;width:30px;height:30px;border-radius:50%;background:var(--purple-soft);color:var(--purple);font:600 .95rem var(--body);display:grid;place-items:center}
+.purposes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
+.purposes div{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--purple);border-radius:0 10px 10px 0;padding:14px 18px}
 
-.day{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px}
-.day h3{margin-bottom:4px}
-.day .when{color:var(--muted);margin-bottom:14px;font-weight:600}
-.day ul{margin:0;padding-left:1.2em}
-.day li{margin-bottom:.35em}
-
-.hana{background:var(--surface);border-left:6px solid var(--amber);padding:22px 26px;border-radius:0 12px 12px 0}
-.hana p:last-child{margin:0}
-
-
-/* day 1 module */
-.day1 .intro{max-width:66ch}
-.compare{width:100%;border-collapse:collapse;margin:24px 0 8px;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:1rem}
-.compare th,.compare td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:top}
-.compare thead th{font-family:var(--head);font-weight:500;background:var(--teal-soft)}
-.compare tbody th{font-weight:600;width:20%}
-.compare tr:last-child th,.compare tr:last-child td{border-bottom:0}
-.table-scroll{overflow-x:auto}
-.sched{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:28px 0 8px}
-.sched .day ul{list-style:none;padding:0}
-.sched .day li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dashed var(--line);padding:6px 0;margin:0}
-.sched .day li span:last-child{color:var(--muted);white-space:nowrap}
-.theories{margin-top:28px;display:grid;gap:10px}
-.theories h3{margin:18px 0 2px;font-size:1.05rem;color:var(--muted);font-weight:500}
+.theories{margin-top:24px;display:grid;gap:10px}
 details.t{background:var(--surface);border:1px solid var(--line);border-radius:12px}
 details.t summary{cursor:pointer;list-style:none;padding:16px 20px;display:flex;gap:14px;align-items:baseline;font-family:var(--head);font-weight:500;font-size:1.15rem}
 details.t summary::-webkit-details-marker{display:none}
-details.t summary::after{content:"+";margin-left:auto;font:600 1.4rem var(--body);color:var(--teal)}
+details.t summary::after{content:"+";margin-left:auto;font:600 1.4rem var(--body);color:var(--purple)}
 details.t[open] summary::after{content:"\2212"}
-details.t summary .time{font:400 .95rem var(--body);color:var(--muted)}
 details.t .body{padding:0 20px 20px;border-top:1px solid var(--line)}
 details.t .q{margin:16px 0 8px;font-weight:600}
-details.t dl{margin:12px 0 0;display:grid;grid-template-columns:9rem 1fr;gap:8px 16px}
+details.t dl{margin:12px 0 0;display:grid;grid-template-columns:11rem 1fr;gap:8px 16px}
 details.t dt{font-weight:600;color:var(--muted)}
 details.t dd{margin:0}
-.activity{margin-top:14px;padding:12px 16px;background:var(--amber-soft);border-radius:8px;border-left:5px solid var(--amber);font-size:1rem}
-.commit{margin-top:32px}
-@media (max-width:820px){
-  .sched{grid-template-columns:1fr}
-  details.t dl{grid-template-columns:1fr;gap:2px}
-  details.t dd{margin-bottom:8px}
-}
+.activity{margin-top:14px;padding:12px 16px;background:var(--gold-soft);border-radius:8px;border-left:5px solid var(--gold);font-size:1rem}
 
-/* downloads */
-.downloads{padding:64px 0 72px;background:var(--surface)}
-.dl-list{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px}
+.method{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.method div{background:var(--purple-soft);border-radius:10px;padding:14px 16px;font-family:var(--head);font-weight:500}
+
+.downloads{padding:60px 0 68px;background:var(--surface);border-bottom:0}
+.dl-list{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:14px}
 .dl{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
-.badge{width:56px;height:56px;border-radius:10px;display:grid;place-items:center;font:700 .95rem var(--head);color:#fff}
-.badge.pdf{background:#B3352B}
-.badge.xls{background:#1E7B45}
+.badge{width:56px;height:56px;border-radius:10px;display:grid;place-items:center;font:700 .95rem var(--head);color:#fff;background:var(--purple)}
+@media (prefers-color-scheme: dark){.badge{color:#12111C}}
 .dl h3{font-size:1.15rem;margin-bottom:2px}
 .dl p{margin:0;color:var(--muted);font-size:1rem;line-height:1.45}
-.btn{display:inline-block;padding:11px 20px;background:var(--teal);color:#fff;font-weight:600;text-decoration:none;border-radius:8px;white-space:nowrap}
-@media (prefers-color-scheme: dark){.btn{color:#0F1826}}
+.btn{background:var(--purple);color:#fff;white-space:nowrap}
+@media (prefers-color-scheme: dark){.btn{color:#12111C}}
 .btn:hover{filter:brightness(1.1)}
 .note{margin-top:22px;color:var(--muted);font-size:1rem}
-
 footer{padding:28px 0 40px;color:var(--muted);font-size:.98rem}
 
-@media (max-width:820px){
-  .steps{grid-template-columns:repeat(2,1fr)}
-  .steps li{min-height:64px}
-  .cols,.cols.wide{grid-template-columns:1fr}
+@media (max-width:860px){
+  .facts{grid-template-columns:1fr 1fr}
+  .cols,.purposes{grid-template-columns:1fr}
+  .method{grid-template-columns:1fr 1fr}
+  details.t dl{grid-template-columns:1fr;gap:2px}
+  details.t dd{margin-bottom:8px}
   .dl{grid-template-columns:auto 1fr}
   .dl .btn{grid-column:1 / -1;text-align:center}
 }
+@media (max-width:480px){.facts{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<a class="skip" href="#downloads">Skip to downloads</a>
+<div class="topbar"></div>
 
 <header class="hero">
   <div class="wrap">
     <div class="org">Addis Ababa Science and Technology University</div>
-    <h1>Creativity and Innovation</h1>
-    <p class="lead">A two-day training on where new ideas come from and how to turn them into improvements that real people use. You will leave with a tested idea from your own workplace and a plan to put it to work.</p>
-    <a class="jump" href="#day1">Explore the Day 1 module</a> <a class="jump" style="background:transparent;color:var(--ink);border:2px solid var(--ink)" href="#downloads">Go to the downloads</a>
+    <h1>Creativity and Innovation Behavioral Competency</h1>
+    <p class="lead">A training for AASTU employees on adapting to new changes, finding new ways of working, and turning creative ideas into better service delivery and productivity.</p>
 
-    <div class="journey" aria-label="The ten steps taught on Day 2">
-      <div class="lane c">
-        <h3>Creativity, the morning of Day 2</h3>
-        <ol class="steps">
-          <li>Preparation</li><li>Incubation</li><li>Illumination</li><li>Evaluation</li><li>Implementation</li>
-        </ol>
-      </div>
-      <div class="lane i">
-        <h3>Innovation, the afternoon of Day 2</h3>
-        <ol class="steps">
-          <li>Ideation</li><li>Concept Development</li><li>Prototyping</li><li>Validation</li><li>Deployment and Scaling</li>
-        </ol>
-      </div>
+    <div class="facts">
+      <div class="fact"><div class="k">Date</div><div class="v">November 11, 2026</div></div>
+      <div class="fact"><div class="k">Duration</div><div class="v">3 days</div></div>
+      <div class="fact"><div class="k">Trainers</div><div class="v">Adamu Esubalew (PhD) and Mohammed Zeinu (MA)</div></div>
+      <div class="fact"><div class="k">For</div><div class="v">AASTU employees</div></div>
     </div>
+    <a class="jump" href="#downloads">Download the slides</a>
+    <a class="jump alt" href="#units">Explore the units</a>
   </div>
 </header>
 
 <main>
-  <section id="about">
-    <div class="wrap cols wide">
-      <div>
-        <h2>About the training</h2>
-        <p>Why do some people and organizations keep producing fresh ideas while others repeat the same routines year after year? This training answers that question in plain language, with no background in psychology or management needed.</p>
-        <p>Creativity is the ability to produce ideas that are both new and useful. Innovation is the work of turning such an idea into something that is tested, accepted, and used. An organization needs both, and both can be learned and managed.</p>
-        <p>Every theory and every step is connected to daily work, such as handling requests, writing letters, serving clients, keeping records, or caring for patients.</p>
-      </div>
-      <div>
-        <h2>By the end you will be able to</h2>
-        <ul class="plain">
-          <li>Explain seven theories of creativity and give a workplace example for each.</li>
-          <li>Describe the five steps of the creativity process and the five steps of the innovation process.</li>
-          <li>Use practical tools such as problem questions, scoring matrices, SCAMPER, prototypes, and test plans.</li>
-          <li>Name the habits and conditions that help or block new ideas in an office.</li>
-          <li>Present one real workplace idea, from problem to rollout plan, in two minutes.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="days">
+  <section id="overview">
     <div class="wrap">
-      <h2>The two days</h2>
-      <p class="sub">Each day has a two-hour morning session and a two-hour afternoon session. Day 1 explains where creativity comes from. Day 2 moves from explanation to action.</p>
-      <div class="cols" style="margin-top:28px">
-        <div class="day">
-          <h3><a href="#day1" style="color:inherit">Day 1: Key theories</a></h3>
-          <div class="when">Wednesday, Chapter 1</div>
-          <ul>
-            <li>Shrinking Earth Theory</li>
-            <li>Systems Theory</li>
-            <li>Honing Theory</li>
-            <li>Everyday Imaginative Thought Theory</li>
-            <li>Evolution Theory</li>
-            <li>Investment Theory</li>
-            <li>Social Personality Theory</li>
-            <li>Bringing the theories together and a personal action plan</li>
-          </ul>
-        </div>
-        <div class="day">
-          <h3>Day 2: Processes and steps</h3>
-          <div class="when">Thursday, Chapter 2</div>
-          <ul>
-            <li>The five steps of the creativity process</li>
-            <li>The five steps of the innovation process</li>
-            <li>How creativity and innovation depend on each other</li>
-            <li>How organizations can strengthen them, and the challenges to expect</li>
-            <li>Two-minute project pitches</li>
-          </ul>
-        </div>
+      <h2>Training overview</h2>
+      <p class="sub">Creative and innovative behavioral competency enhances an employee's ability to adapt to modern and new changes and apply them to the existing situation. The training is designed to strengthen it for four purposes.</p>
+      <div class="purposes">
+        <div>Identifying new ways of working</div>
+        <div>Predicting the future focuses</div>
+        <div>Understanding and implementing appropriate response</div>
+        <div>Promoting and implementing study findings that improve service delivery and productivity</div>
       </div>
     </div>
   </section>
 
-
-  <section id="day1" class="day1">
-    <div class="wrap">
-      <h2>Day 1: Key theories of creativity and innovation</h2>
-      <p class="intro">Wednesday, two hours in the morning and two in the afternoon. Researchers have offered several explanations for where creativity comes from. You will study seven of them, each as a different lens, and leave with a personal action plan to apply at least three ideas.</p>
-
-      <div class="table-scroll">
-      <table class="compare">
-        <thead><tr><th></th><th>Creativity</th><th>Innovation</th></tr></thead>
-        <tbody>
-          <tr><th>Main question</th><td>What new ideas can we imagine?</td><td>How do we make the idea work in real life?</td></tr>
-          <tr><th>Focus</th><td>Generating and shaping ideas</td><td>Testing, adopting, and spreading ideas</td></tr>
-          <tr><th>Typical result</th><td>A concept, a draft, a plan</td><td>A changed service, product, or practice</td></tr>
-          <tr><th>Typical risk</th><td>Ideas that stay on paper</td><td>Resistance, cost, and poor planning</td></tr>
-        </tbody>
-      </table>
-      </div>
-      <p class="sub">In short, creativity supplies the seed and innovation grows it into a plant that bears fruit.</p>
-
-      <div class="sched">
-        <div class="day">
-          <h3>Morning session</h3>
-          <div class="when">Theories 1.1.1 to 1.1.4</div>
-          <ul>
-            <li><span>Opening and introduction</span><span>10 min</span></li>
-            <li><span>Shrinking Earth Theory</span><span>20 min</span></li>
-            <li><span>Systems Theory</span><span>25 min</span></li>
-            <li><span>Break</span><span>10 min</span></li>
-            <li><span>Honing Theory</span><span>25 min</span></li>
-            <li><span>Everyday Imaginative Thought</span><span>25 min</span></li>
-            <li><span>Morning recap</span><span>5 min</span></li>
-          </ul>
-        </div>
-        <div class="day">
-          <h3>Afternoon session</h3>
-          <div class="when">Theories 1.1.5 to 1.1.7 and synthesis</div>
-          <ul>
-            <li><span>Welcome back and quick review quiz</span><span>10 min</span></li>
-            <li><span>Evolution Theory</span><span>25 min</span></li>
-            <li><span>Investment Theory</span><span>30 min</span></li>
-            <li><span>Break</span><span>10 min</span></li>
-            <li><span>Social Personality Theory</span><span>30 min</span></li>
-            <li><span>Bringing the theories together and personal action plan</span><span>15 min</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <h2 style="margin-top:40px">The seven theories</h2>
-      <p class="sub">Three theories look at the environment, two at the process of creating, and two at the person. A creative organization pays attention to all three at once. Open a theory to see its central question, its main idea, and its activity.</p>
-      <div class="theories">
-      <details class="t">
-        <summary><span>1.1.1 Shrinking Earth Theory</span><span class="time">20 min, environment</span></summary>
-        <div class="body">
-          <p class="q">How does a connected world push people and organizations to create?</p>
-          <p>As roads, airlines, mobile networks, and the internet shrink distance, ideas, people, and information meet more often. That meeting of different ideas is a strong source of creativity. Mobile money, for example, joined a bank account with a mobile phone, and telebirr changed how many Ethiopians pay and send money.</p>
-          <dl><dt>What you can do</dt><dd>Learn from others, and adapt their ideas to your own context instead of copying them blindly.</dd></dl>
-          <div class="activity">Activity 1, Idea Import (10 minutes). Think of a good practice from another office, university, or country. Say what problem it could solve for you and what must change so that it fits your culture.</div>
-        </div>
-      </details>
-      <details class="t">
-        <summary><span>1.1.2 Systems Theory</span><span class="time">25 min, environment</span></summary>
-        <div class="body">
-          <p class="q">How do the person, the field of experts, and the knowledge domain work together?</p>
-          <p>Developed mainly by Mihaly Csikszentmihalyi. Creativity happens in the interaction of three parts. The domain is the body of knowledge and rules. The field is the people who decide what is accepted, such as supervisors and committees. The individual is the person who brings a new variation. An idea becomes a creative contribution when the field accepts it.</p>
-          <dl><dt>What you can do</dt><dd>Master your domain, understand how the field judges ideas, and think about who will be affected by your change.</dd></dl>
-          <div class="activity">Activity 2, Map the System (15 minutes). In groups of four, draw a routine process, mark who must approve each step, and circle one step to improve.</div>
-        </div>
-      </details>
-      <details class="t">
-        <summary><span>1.1.3 Honing Theory</span><span class="time">25 min, process</span></summary>
-        <div class="body">
-          <p class="q">How do ideas and the thinker change through repeated refinement?</p>
-          <p>Developed by Liane Gabora. Ideas rarely arrive complete. They are sharpened through many drafts, and each draft teaches the creator something new. The idea changes the thinker, and the thinker changes the idea. The visitor register example shows four drafts that end in a smooth process and a much deeper understanding of visitors.</p>
-          <dl><dt>What you can do</dt><dd>Start rough, ask for feedback early, keep earlier versions, and ask after each draft what it taught you.</dd></dl>
-          <div class="activity">Activity 3, Three Drafts (15 minutes). Improve a form, notice, or agenda in three rounds of three minutes, with a neighbor commenting after each round.</div>
-        </div>
-      </details>
-      <details class="t">
-        <summary><span>1.1.4 Everyday Imaginative Thought Theory</span><span class="time">25 min, person</span></summary>
-        <div class="body">
-          <p class="q">Is creativity only for geniuses or part of everyday life?</p>
-          <p>Creativity grows from ordinary imagination. The Four C model of Kaufman and Beghetto describes a ladder from mini-c (a personal insight) and little-c (everyday work creativity) to pro-c (professional) and Big-C (historic achievements). Most valuable workplace innovation comes from many small improvements by ordinary people.</p>
-          <dl><dt>What you can do</dt><dd>Ask what if questions about daily tasks, reverse assumptions, work with constraints, and imagine the process as the client sees it.</dd></dl>
-          <div class="activity">Activity 4, Five What-Ifs (10 minutes). Pick one weekly task, write five what if questions about it, and share your most interesting one.</div>
-        </div>
-      </details>
-      <details class="t">
-        <summary><span>1.1.5 Evolution Theory</span><span class="time">25 min, process</span></summary>
-        <div class="body">
-          <p class="q">How do many ideas compete and the best survive?</p>
-          <p>Proposed by Donald Campbell and developed by Dean Keith Simonton. Creativity works through variation (many different ideas), selection (testing them against criteria and in small pilots), and retention (making what works standard practice). Nobody can know in advance which idea will succeed, so quantity is one of the roads to quality.</p>
-          <dl><dt>What you can do</dt><dd>Generate many ideas, do not criticize too early, pilot the best, and standardize what works.</dd></dl>
-          <div class="activity">Activity 5, Idea Tournament (15 minutes). List ideas for improving service in five minutes, pick the best three by useful, feasible, and affordable, then plan a small test for the winner.</div>
-        </div>
-      </details>
-      <details class="t">
-        <summary><span>1.1.6 Investment Theory</span><span class="time">30 min, person</span></summary>
-        <div class="body">
-          <p class="q">Why do creative people choose unpopular ideas and what resources do they need?</p>
-          <p>Proposed by Robert Sternberg and Todd Lubart. Creative people buy low and sell high with ideas. They pick ideas that are unknown or doubted, develop them, persuade others, and then move on. Six resources work together: intellectual abilities, knowledge, thinking styles, personality, motivation, and environment.</p>
-          <dl><dt>What you can do</dt><dd>Develop your six resources, and treat evidence, clear communication, and patience as part of the investment.</dd></dl>
-          <div class="activity">Activity 6, Resource Check (15 minutes). Rate yourself from 1 to 5 on each resource, choose one to strengthen, and write one concrete step.</div>
-        </div>
-      </details>
-      <details class="t">
-        <summary><span>1.1.7 Social Personality Theory</span><span class="time">30 min, environment</span></summary>
-        <div class="body">
-          <p class="q">How do personality traits and the social setting shape creativity?</p>
-          <p>Creativity comes from the meeting of personal traits, such as curiosity, independence, and persistence, with a supportive environment. Teresa Amabile found that people are usually more creative when motivated by interest and challenge than when pressured by threats, strict surveillance, or heavy competition. Culture matters too, because junior staff may hesitate to share ideas where respect for seniority is strong.</p>
-          <dl><dt>What you can do</dt><dd>Protect intrinsic motivation and create safe ways to speak, such as short idea meetings and thanking people who raise problems.</dd></dl>
-          <div class="activity">Activity 7, Climate Check (15 minutes). List three things in your office that help creativity and three that block it, then choose one blocker you can influence and write an action.</div>
-        </div>
-      </details>
-      </div>
-
-      <div class="hana commit">
-        <h3 style="margin-bottom:8px">Your action plan</h3>
-        <p>Activity 8, My Creativity Commitments (15 minutes). Finish three sentences. From one theory, what you will start doing by a date. From another theory, what you will stop or change by a date. And what you will do to help your team at the next meeting. Be specific and realistic.</p>
-        <p>Read the full chapter in the downloads section below.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="how">
+  <section id="contents">
     <div class="wrap cols">
       <div>
-        <h2>How to use the chapters</h2>
-        <ul class="plain">
-          <li>Read the short explanation of each topic, then follow your trainer through the activity.</li>
-          <li>Use the Key ideas boxes to review quickly and the Check your understanding boxes to test yourself.</li>
-          <li>Write in the module. Your own examples will help you remember far more than the printed ones.</li>
-          <li>On Day 2, keep your project answers. Each step builds on the work of the previous step.</li>
-        </ul>
+        <h2>Training contents</h2>
+        <ol class="num"><li>Introduction to creativity and innovation</li><li>Creativity and innovation process steps</li><li>Sources and importance of creativity and innovation</li><li>Team-based creativity and innovation</li><li>Creativity and innovation-based perspectives</li><li>Entrepreneurial mindset</li><li>Understanding and implementing new practices and changes</li></ol>
       </div>
-      <div class="hana">
-        <h3 style="margin-bottom:8px">Meet Hana</h3>
-        <p>On Day 2 you will follow Hana, who works in a student records office. Students wait three hours for a clearance letter. Step by step, Hana turns a tired, frustrating problem into an appointment system that brings the wait down to twenty minutes.</p>
-        <p>Then you do the same with a problem of your own.</p>
+      <div>
+        <h2>Training objectives</h2>
+        <p class="sub">The training aims to enhance your ability to generate new creative and innovation-oriented operational processes and to implement new practices and changes. At the end you will be able to:</p>
+        <ul class="plain"><li>Generate new creative and innovation-oriented operation processes</li><li>Identify the importance of creativity and innovation</li><li>Analyze the importance of team-based creativity and innovation</li><li>Implement organizational operational processes and systems</li><li>Encourage and accept creativity and innovation-based perspectives</li><li>Generate positive entrepreneurial mindsets for creativity and innovation</li><li>Implement new practices and changes in creativity and innovation operational processes</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="units">
+    <div class="wrap">
+      <h2>The units</h2>
+      <p class="sub">Open a unit to see its objective, main ideas, and group activity. Each unit has its own slides in the downloads section below.</p>
+      <div class="theories">
+      <details class="t">
+        <summary><span>1. Introduction and basic theories</span></summary>
+        <div class="body">
+          <p class="q">By the end of this unit you will be able to describe the basic theories of creativity and innovation, identify the nature of creative and innovative processes, and generate new operational processes.</p>
+          <dl><dt>Creativity</dt><dd>The ability to generate new and original ideas. It is marked by originality, imagination, and divergent thinking.</dd><dt>Innovation</dt><dd>Implementing creative ideas in a way that adds value. It is marked by practical application, value creation, and change, and can be incremental or disruptive.</dd><dt>The difference</dt><dd>Creativity is thinking of new things and focuses on new ideas. Innovation is doing new things and focuses on implementation, and it carries time and resource risk.</dd><dt>Basic theories</dt><dd>Shrinking Earth, Systems, Honing, Everyday Imaginative Thought, Evolution, Investment, and Social Personality theories. Each comes with practical ways to apply it in a team.</dd></dl>
+          <div class="activity">Brainstorming questions. What is creativity? What is innovation? Compare creativity and innovation.</div>
+        </div>
+      </details>
+      <details class="t">
+        <summary><span>2. Creativity and innovation process steps</span></summary>
+        <div class="body">
+          <p class="q">By the end of this unit you will be able to identify the steps of creative and innovative processes, see their effect on operational effectiveness, and develop problem-solving processes.</p>
+          <dl><dt>Wallas model</dt><dd>Preparation, incubation, illumination, and verification.</dd><dt>Barron model</dt><dd>Conception, gestation, parturition, and bringing up the baby.</dd><dt>Creative problem solving</dt><dd>Objective finding, fact finding, problem finding, idea finding, solution finding, and acceptance finding.</dd><dt>Directed creativity cycle</dt><dd>Preparation, imagination, development, and action.</dd><dt>Stage-gate innovation model</dt><dd>Idea generation, idea screening, concept development and testing, business analysis, product development, market testing, commercialization, and post-launch review and continuous improvement.</dd></dl>
+          <div class="activity">Reflective activities 2.1 and 2.2. Identify the steps, and explain their impact on the operational effectiveness of organizations.</div>
+        </div>
+      </details>
+      <details class="t">
+        <summary><span>3. Sources and importance of creativity and innovation</span></summary>
+        <div class="body">
+          <p class="q">By the end of this unit you will be able to identify the sources of creativity and innovation, analyze their importance, and identify institutional arrangements and practices that support creative projects.</p>
+          <dl><dt>Sources of creativity</dt><dd>Personal experiences, cultural influences, social interactions, environmental factors, technology and tools, education and learning, growth mindset and divergent thinking, economic and political contexts, global trends, and accidental discoveries.</dd><dt>Sources of innovation</dt><dd>A recurring problem in the work unit, exposure to new ideas and trends, listening to customers, talking with creative thinkers, and researching how new technologies are used.</dd><dt>Importance</dt><dd>Competitive advantage, efficiency, better customer experience, economic growth, sustainability, employee engagement, and better problem solving.</dd><dt>Impacts</dt><dd>On individuals (personal growth and career), organizations (competitiveness and sustainability), and communities (economic development and social cohesion).</dd></dl>
+          <div class="activity">Activities 3.1 and 3.2, group discussions. Present your reflections on sources, importance, impacts, and the institutional arrangements that support creative and innovative projects.</div>
+        </div>
+      </details>
+      <details class="t">
+        <summary><span>4. Team-based creativity and innovation</span></summary>
+        <div class="body">
+          <p class="q">By the end of this unit you will be able to identify the nature of team-based creativity and innovation, analyze its importance, and implement it.</p>
+          <dl><dt>Nature</dt><dd>A collaborative process in which a group generates novel and useful ideas. Key aspects include diversity of thought, shared goals, open communication, and continuous learning.</dd><dt>Importance</dt><dd>Diverse perspectives, higher motivation and engagement, stronger problem solving, better decisions, knowledge sharing, and stronger team cohesion.</dd><dt>Building effective teams</dt><dd>Look at the team task, team composition, organizational context, and team processes. Reward genuine attempts at innovation, set team norms, encourage reflection, and manage conflict constructively.</dd></dl>
+          <div class="activity">Activity 4.1, group discussion. Explain the nature and importance of team-based creativity, how to foster it, its challenges compared with individual work, and ways to reduce them.</div>
+        </div>
+      </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="method">
+    <div class="wrap">
+      <h2>Time and methods</h2>
+      <p class="sub">The training is designed for 3 days. It uses four methods.</p>
+      <div class="method">
+        <div>Lecture briefing</div>
+        <div>Group discussion</div>
+        <div>Reflections</div>
+        <div>Experience sharing</div>
       </div>
     </div>
   </section>
@@ -371,34 +220,56 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:.98rem}
 
 <section class="downloads" id="downloads">
   <div class="wrap">
-    <h2>Downloads</h2>
-    <p class="sub">Save the chapters to your phone or computer so you can read them before and after each session.</p>
-
+    <h2>Download the slides</h2>
+    <p class="sub">Save the slides to your phone or computer so you can follow along during the sessions and review them afterwards.</p>
     <ul class="dl-list">
       <li class="dl">
-        <div class="badge pdf" aria-hidden="true">PDF</div>
+        <div class="badge" aria-hidden="true">PDF</div>
         <div>
-          <h3>Chapter 1: Key Theories of Creativity and Innovation</h3>
-          <p>Day 1. Seven theories with activities, review questions, and further reading. PDF, 355 KB.</p>
+          <h3>Training overview</h3>
+          <p>Purpose, contents, objectives, time, and methods of the training. 6 slides, 384 KB.</p>
         </div>
-        <a class="btn" href="downloads/Chapter1_Key_Theories_of_Creativity_and_Innovation.pdf" download>Download Chapter 1</a>
+        <a class="btn" href="downloads/Slides0_Training_Overview.pdf" download>Download</a>
       </li>
       <li class="dl">
-        <div class="badge pdf" aria-hidden="true">PDF</div>
+        <div class="badge" aria-hidden="true">PDF</div>
         <div>
-          <h3>Chapter 2: Processes (Steps) of Creativity and Innovation</h3>
-          <p>Day 2. The ten steps, project worksheets, and the two-minute pitch. PDF, 344 KB.</p>
+          <h3>1. Introduction and basic theories</h3>
+          <p>Creativity versus innovation, and the seven basic theories. 23 slides, 455 KB.</p>
         </div>
-        <a class="btn" href="downloads/Chapter2_Processes_of_Creativity_and_Innovation.pdf" download>Download Chapter 2</a>
+        <a class="btn" href="downloads/Slides1_Introduction_and_Basic_Theories.pdf" download>Download</a>
+      </li>
+      <li class="dl">
+        <div class="badge" aria-hidden="true">PDF</div>
+        <div>
+          <h3>2. Creativity and innovation process steps</h3>
+          <p>Wallas, Barron, creative problem solving, directed creativity cycle, and the stage-gate model. 15 slides, 462 KB.</p>
+        </div>
+        <a class="btn" href="downloads/Slides2_Creativity_and_Innovation_Process_Steps.pdf" download>Download</a>
+      </li>
+      <li class="dl">
+        <div class="badge" aria-hidden="true">PDF</div>
+        <div>
+          <h3>3. Sources and importance</h3>
+          <p>Where creativity and innovation come from, why they matter, and their impacts. 11 slides, 481 KB.</p>
+        </div>
+        <a class="btn" href="downloads/Slides3_Sources_and_Importance.pdf" download>Download</a>
+      </li>
+      <li class="dl">
+        <div class="badge" aria-hidden="true">PDF</div>
+        <div>
+          <h3>4. Team-based creativity and innovation</h3>
+          <p>Nature and importance of teamwork, and how to build effective teams. 20 slides, 563 KB.</p>
+        </div>
+        <a class="btn" href="downloads/Slides4_Team_Based_Creativity_and_Innovation.pdf" download>Download</a>
       </li>
     </ul>
-
-    <p class="note">If a file does not open, check that you have a PDF reader or Excel installed, or try a different browser.</p>
+    <p class="note">If a file does not open, check that you have a PDF reader installed, or try a different browser.</p>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">Creativity and Innovation Training Module, Addis Ababa Science and Technology University.</div>
+  <div class="wrap">Creativity and Innovation Behavioral Competency, Addis Ababa Science and Technology University. Trainers: Adamu Esubalew (PhD) and Mohammed Zeinu (MA).</div>
 </footer>
 </body>
 </html>
